@@ -1,0 +1,28 @@
+{
+  "name": "vue-learning",
+  "version": "1.0.0",
+  "description": "Vue Learning",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bell-bo/Vue-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bell-bo/Vue-learning/issues"
+  },
+  "homepage": "https://github.com/bell-bo/Vue-learning#readme",
+  "dependencies": {
+    "vuepress": "^1.2.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-nprogress": "^1.2.0"
+  }
+}
