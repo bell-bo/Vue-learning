@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/Vue-learning/reactive/',
+  base: '/Vue-learning/',
   title: 'Vue Learning',
   description: 'vue.js源码学习总结',
   head: [
