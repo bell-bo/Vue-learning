@@ -13,7 +13,14 @@ module.exports = {
       title: 'vue源码分析',
       collapsable: false,
       children: [
-        ['reactive/', '响应式原理'],
+        {
+          title:"响应式原理",
+          collapsable:true,
+          children:[
+            ['reactive/', '原理概述&流程分析'],
+            ['reactive/Observer',"双向绑定代码分析"]
+          ]
+        },
         ['lifecycle/', '生命周期'],
         ['virtualDOM/', '虚拟 DOM 与 diff'],
         ['complie/', '模板编译'],
@@ -22,7 +29,7 @@ module.exports = {
         ['other/', '其他'],
       ]
     }],
-    sidebarDepth: 1,
+    sidebarDepth:0,
     repo: 'https://github.com/bell-bo/Vue-learning#readme',
     docsDir: 'docs',
     editLinks: true,
@@ -34,7 +41,7 @@ module.exports = {
       return {
         resolve: {
           alias: {
-            '@public': './public'
+            '@public': './static'
           }
         }
       }
