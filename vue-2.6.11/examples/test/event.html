@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>事件处理</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <!-- <script src="../../dist/vue.js"></script> -->
+  </head>
+
+  <body>
+    <div id="app">
+      <div>{{arr}}</div>
+      <button @click="btn">change</button>
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            arr: ["a", [1, 2, { b: "b" }, [3, 4]], { c: "c" }],
+            msg: (x)=>{
+            console.log(x+'2');
+          }
+          };
+        },
+        created() {
+          this.$on('event',this.msg)
+          this.$on('event',this.msg)
+          // this.$once(['event','xx'],this.msg)
+        },
+        methods: {
+          btn() {
+            // this.arr[2].c = "b";
+            // this.$emit('event','qwe')
+            this.$off('event',this.msg)
+            this.$emit('event','sdfsd')
+          }
+        },
+      });
+    </script>
+  </body>
+</html>
