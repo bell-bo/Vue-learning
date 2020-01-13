@@ -10,23 +10,53 @@ module.exports = {
   },
   themeConfig: {
     sidebar: [{
-      title: 'vue源码分析',
+      title: '初始化实例',
       collapsable: false,
       children: [
-        {
-          title:"响应式原理",
-          collapsable:true,
-          children:[
-            ['reactive/', '原理概述&流程分析'],
-            ['reactive/Observer',"双向绑定代码分析"]
-          ]
-        },
-        ['lifecycle/', '生命周期'],
-        ['virtualDOM/', '虚拟 DOM 与 diff'],
-        ['complie/', '模板编译'],
-        ['globalAPI/', '全局API'],
-        ['buildInComponents/', '内置组件'],
-        ['other/', '其他'],
+        ['instance/', '原理概述&流程分析'],
+        ['instance/defineEvent', '自定义事件处理'],
+      ]
+    },{
+      title: '响应式原理',
+      collapsable: false,
+      children: [
+        ['reactive/Observer',"双向绑定代码分析"]
+      ]
+    },{
+      title: '生命周期',
+      collapsable: false,
+      children: [
+        // ['reactive/Observer',"xxx"]
+      ]
+    },{
+      title: '虚拟 DOM 与 diff',
+      collapsable: false,
+      children: [
+        // ['virtualDOM/', 'xxx'],
+      ]
+    },{
+      title: '模板编译',
+      collapsable: false,
+      children: [
+        // ['complie/', 'xxx']
+      ]
+    },{
+      title: '全局API',
+      collapsable: false,
+      children: [
+        // ['globalAPI/', 'xxx'],
+      ]
+    },{
+      title: '内置组件',
+      collapsable: false,
+      children: [
+        // ['buildInComponents/', 'xxx']
+      ]
+    },{
+      title: '其他',
+      collapsable: false,
+      children: [
+        // ['other/', 'xxx'],
       ]
     }],
     sidebarDepth:0,
