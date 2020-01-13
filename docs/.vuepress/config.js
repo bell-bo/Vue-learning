@@ -60,7 +60,7 @@ module.exports = {
       ]
     }],
     sidebarDepth:0,
-    repo: 'https://github.com/bell-bo/Vue-learning#readme',
+    repo: 'https://github.com/bell-bo/Vue-learning',
     docsDir: 'docs',
     editLinks: true,
     editLinkText: "在 GitHub 上编辑此页",
