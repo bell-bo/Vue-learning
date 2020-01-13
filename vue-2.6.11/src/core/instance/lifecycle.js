@@ -32,7 +32,7 @@ export function setActiveInstance(vm: Component) {
 export function initLifecycle (vm: Component) {
   const options = vm.$options
 
-  // locate first non-abstract parent
+  // locate first non-abstract parent//排除
   let parent = options.parent
   if (parent && !options.abstract) {
     while (parent.$options.abstract && parent.$parent) {
@@ -338,7 +338,7 @@ export function callHook (vm: Component, hook: string) {
   pushTarget()
   const handlers = vm.$options[hook]
   const info = `${hook} hook`
-  if (handlers) {
+  if (handlers) {//mixins
     for (let i = 0, j = handlers.length; i < j; i++) {
       invokeWithErrorHandling(handlers[i], vm, null, vm, info)
     }

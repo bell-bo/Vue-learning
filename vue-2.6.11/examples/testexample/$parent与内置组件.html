@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>$parent与内置组件</title>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script> -->
+  <script src="../../dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <keep-alive></keep-alive>
+    <component-a></component-a>
+  </div>
+  <script>
+    let mixin = {
+      beforeCreate() {
+        console.log('mixins beforeCreate')
+      },
+      created() {
+        console.log('mixins created')
+      },
+      beforeMount() {
+        console.log('mixins beforeMount')
+      },
+      mounted() {
+        console.log('mixins mounted')
+      },
+      beforeUpdate: function () {
+        console.log('mixins beforeUpdate')
+      },
+      updated: function () {
+        console.log('mixins updated')
+      },
+      beforeDestroy: function () {
+        console.log('mixins beforeDestroy')
+      },
+      destroyed: function () {
+        console.log('mixins destroyed')
+      },
+      data() {
+        return {
+          msg: 1
+        }
+      },
+      methods: {
+        foo() {
+          console.log('mixin foo()' + this.msg++)
+        }
+      }
+    }
+    new Vue({
+      el: "#app",
+      mixins: [mixin],
+      components: {
+        'component-a': {
+          template: '<div>{{msg}}</div>',
+          data() {
+            return {
+              msg: 'a'
+            }
+          },
+          beforeCreate() {
+            console.log('child beforeCreate')
+          },
+          created() {
+            console.log('child created')
+          },
+          beforeMount() {
+            console.log('child beforeMount')
+          },
+          mounted() {
+            console.log('child mounted')
+          },
+          beforeUpdate: function () {
+            console.log('child beforeUpdate')
+          },
+          updated: function () {
+            console.log('child updated')
+          },
+          beforeDestroy: function () {
+            console.log('child beforeDestroy')
+          },
+          destroyed: function () {
+            console.log('child destroyed')
+          },
+        },
+      },
+      data() {
+        return {};
+      },
+      beforeCreate() {
+        console.log('beforeCreate')
+      },
+      created() {
+        console.log('created')
+      },
+      beforeMount() {
+        console.log('beforeMount')
+      },
+      mounted() {
+        console.log('mounted')
+      },
+      beforeUpdate: function () {
+        console.log('beforeUpdate')
+      },
+      updated: function () {
+        console.log('updated')
+      },
+      beforeDestroy: function () {
+        console.log('beforeDestroy')
+      },
+      destroyed: function () {
+        console.log('destroyed')
+      },
+      methods: {},
+    });
+  </script>
+</body>
+
+</html>
