@@ -150,7 +150,7 @@ new Vue({
 
 `const vm: Component = this`
 
-![iage](./images/component_public.png)
+![image](./images/component_public.png)
 
 除了公共的属性、方法外还有内部用于数据流转处理的私有属性、方法。以`_**`方式命名。
 

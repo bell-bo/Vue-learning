@@ -15,6 +15,7 @@ module.exports = {
       children: [
         ['instance/', '原理概述&流程分析'],
         ['instance/defineEvent', '自定义事件处理'],
+        ['instance/implementEvent', '实现Vue事件机制'],
       ]
     },{
       title: '响应式原理',
