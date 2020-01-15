@@ -34,8 +34,8 @@ export function initLifecycle (vm: Component) {
 
   // locate first non-abstract parent//排除
   let parent = options.parent
-  if (parent && !options.abstract) {
-    while (parent.$options.abstract && parent.$parent) {
+  if (parent && !options.abstract) {//如果父组件存在并且自己不是抽象组件，
+    while (parent.$options.abstract && parent.$parent) {//父组件是抽象组件并且父组件有父组件。
       parent = parent.$parent
     }
     parent.$children.push(vm)
