@@ -1,3 +1,3 @@
 # 依赖收集
 
-![依赖收集](/images/reactive/reactive-getterdepend.png)
+![依赖收集](/Vue-learning/images/reactive/reactive-getterdepend.png)

@@ -1,3 +1,3 @@
 # 派发更新
 
-![派发更新](/images/reactive/reactive-setternotify.png)
+![派发更新](/Vue-learning/images/reactive/reactive-setternotify.png)
