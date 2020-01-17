@@ -1,2 +1,3 @@
-## 手动实现Vue选项`data`中数据的绑定、监听。
+# 响应式对象
 
+![响应式原理](/images/reactive/reactive.png)

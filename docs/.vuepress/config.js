@@ -21,7 +21,9 @@ module.exports = {
       title: '响应式原理',
       collapsable: false,
       children: [
-        ['reactive/Observer',"双向绑定代码分析"]
+        ['reactive/Observer',"响应式对象"],
+        ['reactive/GetterDepend',"依赖收集"],
+        ['reactive/SetterNotify',"派发更新"]
       ]
     },{
       title: '生命周期',
