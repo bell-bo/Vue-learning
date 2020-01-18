@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>props</title>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script> -->
+  <script src="../../dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="btn">{{parent}}</button>
+    <component-a :x-x-x='msg'></component-a>
+  </div>
+  <script>
+    new Vue({
+      el: "#app",
+      components: {
+        'component-a': {
+          template: '<div>{{xXX}}<button @click="btn">child</button></div>',
+          props: ['x-x-x', 'aa'],
+          data() {
+            return {
+              // msg: 'a'
+            }
+          },
+          methods: {
+            btn() {
+              this.xXX = 'b'
+            }
+          },
+        },
+      },
+      propsData: {
+        parent: 'parent'
+      },
+      props: ['parent'],
+      data() {
+        return {
+          msg: 'a'
+        };
+      },
+      beforeCreate() {
+        console.log('beforeCreate')
+      },
+      created() {
+        console.log('created')
+      },
+      methods: {
+        btn() {
+          this.parent = 'xxx'
+          this.msg = 'b'
+        }
+      },
+    });
+  </script>
+</body>
+
+</html>
